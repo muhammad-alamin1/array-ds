@@ -20,7 +20,7 @@ int main(void)
     printf("Concatenate Array: ");
     print_arr(concat_arr, arr1_size + arr2_size);
 
-    free(concatenated_array);
+    free(concat_arr);
 }
 
 int* concatenated_array(int arr1[], unsigned int size1, int arr2[], unsigned int size2)
@@ -32,7 +32,7 @@ int* concatenated_array(int arr1[], unsigned int size1, int arr2[], unsigned int
     result = (int*)malloc(new_size * (sizeof(int)));
     if(result == NULL){
         fprintf(stderr, "Error! Memory Allocation Failed.!");
-        return;
+        return NULL;
     }
 
     // copy element of the first arr
