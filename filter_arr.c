@@ -16,7 +16,6 @@ int main(void)
 
     printf("Original Array: ");
     print_arr(arr, size);
-
     printf("Filtered Array: ");
     print_arr(result, new_size);
 
